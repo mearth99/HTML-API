@@ -17,3 +17,4 @@ API를 이용해 입력한 내용을 반드시 포함하는 댓글을 만들어�
     
 # 결과 이미지
 <img width="478" alt="html1" src="https://user-images.githubusercontent.com/90100440/171867967-2b2d10e1-df3f-404b-9200-637f1be20372.PNG">
+<img width="622" alt="html2" src="https://user-images.githubusercontent.com/90100440/171868244-7a1da4b8-d127-4caf-93a6-dbeb1e42b884.PNG">
