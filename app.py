@@ -1,14 +1,12 @@
-from unicodedata import category
 from flask import Flask, render_template, request
-import requests, random, json
+import requests, random
 
 url = "https://master-gpt2-everytime-fpem123.endpoint.ainize.ai/everytime/fix-length"
 
 app = Flask(__name__)
 @app.route('/')
 def index():
-    return render_template("index.html")
-
+    return render_template("result.html")
 @app.route('/',methods = ['POST','GET'])
 def result():
      if request.method == 'POST':
@@ -21,10 +19,10 @@ def result():
             "category": category,
             "length": 10
         }
-        if(qurl_num>10):
-            qurl_num=10
+        if(qurl_num>5):
+            qurl_num=5
         sum = []
-        for i in range(0,qurl_num):
+        for i in range(1,qurl_num+1):
             data["length"] = random.randrange(10,30)
             response = requests.post(url, data=data)
 # print res if the request is successful
@@ -39,5 +37,5 @@ def result():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
 
